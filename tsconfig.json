@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    //"strict": true,
+    "jsx": "preserve",
+    "noEmit": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    /* Enables experimental support for emitting type metadata for decorators. */
+    "removeComments": true, //删除所有注释，除了以 /!*开头的版权信息
+    "noImplicitAny": false,
+    /* Raise error on expressions and declarations with an implied 'any' type. */
+    "noFallthroughCasesInSwitch": true, //报告switch语句的fallthrough错误。（即，不允许switch的case语句贯穿）
+    "noImplicitThis": false,
+    "skipLibCheck": true, //忽略所有的声明文件（ *.d.ts）的类型检查。
+    "baseUrl": ".",
+    "types": [
+      "webpack-env"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "esnext.array",
+      "esnext.asynciterable",
+      "scripthost",
+      "webworker",
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.scss",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
